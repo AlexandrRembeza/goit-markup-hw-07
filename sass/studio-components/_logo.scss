@@ -1,0 +1,18 @@
+.logo {
+    color: getColor("accent-color");
+    text-decoration: none;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin-right: 93px;
+}
+.logo--black {
+    color: #000;
+}
+
+.logo--white {
+    color: #fff;
+}

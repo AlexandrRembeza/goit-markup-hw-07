@@ -1,0 +1,114 @@
+.header {
+  background-color: getColor("special-color");
+
+  padding-bottom: 31px;
+  padding-top: 32px;
+
+
+    &--underline {
+        border-bottom: 1px solid #ececec;
+    }
+
+    &__main-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 50px;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__item-studio--active::after,
+    &__item-prtf--active::after {
+        position: absolute;
+        top: 50.5px;
+        left: 0px;
+
+        display: block;
+        content: '';
+        height: 4px;
+
+        /*opacity: 0;
+    pointer-events: none;*/
+
+        background: getColor("accent-color");
+        border-radius: 2px;
+    }
+
+    &__item-studio--active::after {
+        width: 48px;
+    }
+
+    &__item-prtf--active::after {
+        width: 77px;
+    }
+
+    /*.header__item-studio--active:hover::after {
+    opacity: 1;
+    }*/
+    /*.header__item-prtf--active:hover::after {
+    opacity: 1;
+    }*/
+    &__site-nav,
+    &__auth-nav {
+        @extend %list;
+        display: flex;
+
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+    }
+
+    &__link {
+        display: block;
+
+        color: getColor("title-color");
+        text-decoration: none;
+        transition: color 250ms $animation-timfun;
+    }
+
+    &__link:hover,
+    &__link:focus,
+    &__contact:hover,
+    &__contact:focus {
+        color: getColor("accent-color");
+    }
+
+    &__link--current {
+        color: getColor("accent-color");
+    }
+
+    &__contact {
+        display: inline-flex;
+        align-items: center;
+
+        text-decoration: none;
+        color: getColor("text-color");
+
+        transition: color 250ms $animation-timfun;
+    }
+
+    &__icon {
+        fill: #757575;
+        transition: fill 250ms $animation-timfun;
+    }
+
+    &__contact:hover &__icon,
+    &__contact:focus &__icon {
+        fill: getColor("accent-color");
+    }
+
+    &__icon--envelope {
+        margin-right: 10px;
+    }
+
+    &__icon--smartphone {
+        margin-right: 10px;
+        margin-left: 30px;
+    }
+}

@@ -1,0 +1,87 @@
+.our-team {
+    background-color: getColor("team-color");
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__title {
+        @extend %section-title;
+        @extend %title-style;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    &__subtitle {
+        @extend %section-title;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    &__subtitle,
+    &__text {
+        font-size: 16px;
+    }
+
+    &__card-set {
+        @extend %list;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__card {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__text-wrap {
+        background: #ffffff;
+        border-radius: 0px 0px 4px 4px;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+
+    &__img {
+        display: block;
+    }
+
+    &__list-links {
+        @extend %list;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+
+        transition: background-color 250ms $animation-timfun;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        background-color: getColor("accent-color");
+    }
+
+    &__icon {
+        fill: #afb1b8;
+        transition: fill 250ms $animation-timfun;
+    }
+
+    &__link:hover &__icon,
+    &__link:focus &__icon {
+        fill: #ffffff;
+    }
+}

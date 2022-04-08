@@ -1,0 +1,28 @@
+.hero {
+    background-color: getColor("footer-color");
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/hero-bgr.jpg);
+
+    padding-bottom: 200px;
+    padding-top: 200px;
+    text-align: center;
+
+    &__title {
+        color: getColor("special-color");
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+    &__button {
+        @extend %button;
+        text-align: center;
+        padding: 10px 32px;
+        background-color: getColor("accent-color");
+    }
+}

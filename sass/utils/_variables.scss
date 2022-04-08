@@ -1,0 +1,15 @@
+$colors: (
+    "text-color": #757575,
+    "title-color": #212121,
+    "accent-color": #2196f3,
+    "special-color": #ffffff,
+    "footer-color": #2f303a,
+    "team-color": #f5f4fa,
+    "help-color": tomato,
+);
+@function getColor ($color) {
+    @return map-get($colors, $color);
+};
+
+$project-list-margin: 30px;
+$animation-timfun: cubic-bezier(0.4, 0, 0.2, 1);

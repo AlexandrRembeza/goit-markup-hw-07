@@ -1,0 +1,143 @@
+.projects {
+    padding-bottom: 94px;
+    padding-top: 94px;
+
+    &__button {
+        color: getColor("title-color");
+        background-color: getColor("team-color");
+
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        letter-spacing: 0.03em;
+        padding: 6px 22px;
+        cursor: pointer;
+
+        border-radius: 4px;
+        border: none;
+
+        transition: color 250ms $animation-timfun,
+                    background-color 250ms $animation-timfun,
+                    box-shadow 250ms $animation-timfun;
+    }
+
+    &__button-list {
+        @extend %list;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    &__button-item:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    &__button:hover,
+    &__button:focus {
+        color: getColor("special-color");
+        background-color: getColor("accent-color");
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    &__img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__list {
+        @extend %list;
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 0;
+        margin: 0;
+        margin-left: calc(-1 * #{$project-list-margin});
+        margin-top: calc(-1 * #{$project-list-margin});
+    }
+
+    &__item {
+        flex-basis: calc(100% / 3 - #{$project-list-margin});
+        margin-left: $project-list-margin;
+        margin-top: $project-list-margin;
+    }
+
+    &__text-wrap {
+        background: #ffffff;
+        border-right: 1px solid #eeeeee;
+        border-left: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee;
+        padding: 20px 23px 19px;
+    }
+
+    &__link {
+        display: block;
+        text-decoration: none;
+        transition: box-shadow 250ms $animation-timfun;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+        cursor: pointer;
+    }
+
+    &__item:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+    }
+
+    &__subtitle {
+        color: getColor("title-color");
+
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 2;
+        letter-spacing: 0.06em;
+
+        margin-bottom: 4px;
+        margin-top: 0;
+    }
+
+    &__text {
+        color: getColor("text-color");
+        font-size: 16px;
+        line-height: 1.87;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__thumb {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        background-color: rgba(33, 150, 243, 0.9);
+        color: #ffffff;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.55;
+        letter-spacing: 0.03em;
+        padding: 63px 24px;
+        margin: 0;
+
+        transform: translateY(101%);
+        transition: transform 500ms $animation-timfun;
+    }
+
+    &__thumb:hover &__overlay,
+    &__link:focus &__overlay {
+        transform: translateY(0);
+        overflow: visible;
+    }
+}

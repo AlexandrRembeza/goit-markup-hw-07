@@ -1,0 +1,80 @@
+.our-pluses {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__title {
+        margin-top: 0;
+    }
+
+    &__list {
+        @extend %list;
+        display: flex;
+    }
+
+    &__item {
+        width: calc((100%-90px) / 4);
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__subtitle {
+        color: getColor("title-color");
+
+        margin-top: 0;
+        margin-bottom: 10px;
+
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        line-height: 1.71em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__item::before {
+        display: block;
+        content: '';
+        width: 270px;
+        height: 120px;
+
+        background-color: #f5f4fa;
+
+        margin-bottom: 30px;
+        border-radius: 4px;
+    }
+
+    .icon-antenna::before {
+        content: '';
+        background-image: url(../../images/antenna.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__item:nth-child(2)::before {
+        content: '';
+        background-image: url(../../images/clock.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__item:nth-child(3)::before {
+        content: '';
+        background-image: url(../../images/diagram.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__item:nth-child(4)::before {
+        content: '';
+        background-image: url(../../images/astronaut.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
