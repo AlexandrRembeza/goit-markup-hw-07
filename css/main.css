@@ -460,8 +460,8 @@ body {
 
 .hero {
   background-color: #2f303a;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero-bgr.jpg);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-bgr.jpg);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bgr.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgr.jpg);
   padding-bottom: 200px;
   padding-top: 200px;
   text-align: center;
@@ -536,28 +536,28 @@ body {
 
 .our-pluses .icon-antenna::before {
   content: '';
-  background-image: url(../../images/antenna.svg);
+  background-image: url(../images/antenna.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .our-pluses__item:nth-child(2)::before {
   content: '';
-  background-image: url(../../images/clock.svg);
+  background-image: url(../images/clock.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .our-pluses__item:nth-child(3)::before {
   content: '';
-  background-image: url(../../images/diagram.svg);
+  background-image: url(../images/diagram.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .our-pluses__item:nth-child(4)::before {
   content: '';
-  background-image: url(../../images/astronaut.svg);
+  background-image: url(../images/astronaut.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
