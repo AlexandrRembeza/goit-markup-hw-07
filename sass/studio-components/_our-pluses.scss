@@ -52,28 +52,28 @@
 
     .icon-antenna::before {
         content: '';
-        background-image: url(../../images/antenna.svg);
+        background-image: url(../images/antenna.svg);
         background-repeat: no-repeat;
         background-position: center;
     }
 
     &__item:nth-child(2)::before {
         content: '';
-        background-image: url(../../images/clock.svg);
+        background-image: url(../images/clock.svg);
         background-repeat: no-repeat;
         background-position: center;
     }
 
     &__item:nth-child(3)::before {
         content: '';
-        background-image: url(../../images/diagram.svg);
+        background-image: url(../images/diagram.svg);
         background-repeat: no-repeat;
         background-position: center;
     }
 
     &__item:nth-child(4)::before {
         content: '';
-        background-image: url(../../images/astronaut.svg);
+        background-image: url(../images/astronaut.svg);
         background-repeat: no-repeat;
         background-position: center;
     }
